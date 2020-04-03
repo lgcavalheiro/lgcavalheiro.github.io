@@ -237,11 +237,14 @@ hr {
 /* Header                                                                        */
 /*********************************************************************************/
 
-	#header 
+	header 
 	{
-		position: relative;
-		overflow: hidden;
 		text-align: center;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
 	}
 
 /*********************************************************************************/
@@ -351,8 +354,9 @@ hr {
 
 #content
 {
-	float: right;
-	width: 790px;
+	/* float: right;
+	width: 790px; */
+    background-color: lightgray;
 }
 
 /*********************************************************************************/
@@ -581,6 +585,12 @@ hr {
 		width: 344px;
 		padding-left: 40px;
 	}
+
+    footer>ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
 
 
 
