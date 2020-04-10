@@ -12,6 +12,10 @@ body {
 	color: white;
 }
 
+.main-content {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
 
 h1, h2, h3 {
 	margin: 0;
@@ -343,8 +347,6 @@ hr {
 
 #content
 {
-	/* float: right;
-	width: 790px; */
     background-color: gray;
     text-align: center;
 }
@@ -496,16 +498,20 @@ hr {
 /* Footer                                                                        */
 /*********************************************************************************/
 
-    footer>ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-
     footer {
         background-color: gray;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        position: fixed; /* Set the navbar to fixed position */
+        bottom: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
     }
 
+
+    .card {
+        background-color: gray;
+    }
 
 
 
