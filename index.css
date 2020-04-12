@@ -238,6 +238,8 @@ hr {
         position: fixed; /* Set the navbar to fixed position */
         top: 0; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */
+        justify-content: center;
+        z-index: 1;
 	}
 
 /*********************************************************************************/
