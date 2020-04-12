@@ -23,29 +23,24 @@ let curriculumWorkContents = [
         },
     ];
 
-let degrees = [
-        `Systems Development and Analysis (UNICARIOCA)`
+let curriculumDegreeContent = [
+        `Systems Development and Analysis - Centro Universitário Carioca (UNICARIOCA)`
       ];
 
-let skills = {
+let curriculumSkillsContent = {
         languages: [
           {name: 'HTML', icon: 'fab fa-html5 fa-2x'},
           {name: 'CSS', icon: 'fab fa-css3-alt fa-2x'},
-        ],
-        extra: [
           {name: 'Python', icon: 'fab fa-python fa-2x'},
           {name: 'Java', icon: 'fab fa-java fa-2x'},
-        ],
-        extra2: [
           {name: 'Javascript', icon: 'fab fa-js fa-2x'},
-          {name: 'Vue.js', icon: 'fab fa-vuejs fa-2x' },
         ],
-        frameworks: [
+        techs: [
+          {name: 'Vue.js', icon: 'fab fa-vuejs fa-2x' },
           {name: 'Bootstrap', icon: 'fab fa-bootstrap fa-2x' },
           {name: 'Node.js', icon: 'fab fa-node-js fa-2x' },
         ],
-        practices: ['MySQL','DB2','MongoDB'],
-        practices2: ['Scrum', 'Kanban', 'Clean Code'],
+        other: ['MySQL','DB2','MongoDB','Scrum', 'Kanban', 'Clean Code'],
     };
 
 let aboutElements = {
@@ -73,6 +68,12 @@ let curriculumWorkElements = [
     }
 ]
 
+let curriculumDegreeElement = document.getElementById('degree');
+
+let curriculumLangElement = document.getElementsByClassName('language');
+let curriculumTechElement = document.getElementsByClassName('tech');
+let curriculumOtherElement = document.getElementsByClassName('other');
+
 aboutElements.title.innerHTML = aboutContents.title;
 aboutElements.greeting.innerHTML = aboutContents.greeting;
 aboutElements.experience.innerHTML = aboutContents.experience;
@@ -87,5 +88,27 @@ curriculumWorkElements[1].res.innerHTML += curriculumWorkContents[1].res;
 curriculumWorkElements[2].name.innerHTML = curriculumWorkContents[2].name;
 curriculumWorkElements[2].desc.innerHTML += curriculumWorkContents[2].desc;
 curriculumWorkElements[2].res.innerHTML += curriculumWorkContents[2].res;
+
+curriculumDegreeElement.innerHTML = curriculumDegreeContent[0];
+
+for (let el in curriculumLangElement) {
+    if (typeof curriculumSkillsContent.languages[el] == 'object') {
+        let icon = document.createElement('i');
+        icon.className = curriculumSkillsContent.languages[el].icon;
+        curriculumLangElement[el].appendChild(icon);
+    }
+};
+
+for (let el in curriculumTechElement) {
+    if (typeof curriculumSkillsContent.techs[el] == 'object') {
+        let icon = document.createElement('i');
+        icon.className = curriculumSkillsContent.techs[el].icon;
+        curriculumTechElement[el].appendChild(icon);  
+    }  
+};
+
+for (let el in curriculumOtherElement) {
+    curriculumOtherElement[el].innerHTML = curriculumSkillsContent.other[el];
+};
 
 $('.m-2').hide().show(2000);

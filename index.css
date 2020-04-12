@@ -508,13 +508,13 @@ hr {
         position: fixed; /* Set the navbar to fixed position */
         bottom: 0; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */
+        z-index: 1;
     }
 
 
     .card {
         background-color: gray;
     }
-
 
 
 
